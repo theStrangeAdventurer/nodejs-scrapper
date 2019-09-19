@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js"
+    "start": "npm run clean && babel-node index.js",
+    "clean": "rm -rf data && mkdir data "
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "async": "^3.1.0",
     "chalk": "^2.4.2",
     "cherio": "^1.0.0-rc.2",
     "puppeteer": "^1.18.1",
