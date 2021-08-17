@@ -36,6 +36,7 @@ export class PuppeteerHandler {
       const page = await this.browser.newPage();
       await page.goto(url, PAGE_PUPPETEER_OPTS);
       const content = await page.content();
+      await page.close();
       return content;
     } catch (err) {
       throw err;
